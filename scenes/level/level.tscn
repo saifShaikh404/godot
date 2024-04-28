@@ -11,7 +11,9 @@ script = ExtResource("1_lian3")
 position = Vector2(491, -457)
 
 [node name="Player" parent="." instance=ExtResource("2_gnkq0")]
-position = Vector2(118, 262)
+position = Vector2(553, 545)
+
+[node name="Projectiles" type="Node2D" parent="."]
 
 [connection signal="enter_gate" from="Gate" to="." method="_on_gate_enter_gate"]
 [connection signal="exit_gate" from="Gate" to="." method="_on_gate_exit_gate"]
