@@ -1,10 +1,17 @@
 extends Node2D
 
-
-
-func _on_area_body_entered(_body):
+# This signal coming from Gate node
+func _on_gate_enter_gate(body):
 	print('Player Entered')
 
-
-func _on_area_body_exited(_body):
+# This signal coming from Gate node
+func _on_gate_exit_gate(body):
 	print('Player Exited')
+
+# This signal coming from Player node
+func _on_player_player_laser():
+	print('Fire laser');
+
+# This signal coming from Player node
+func _on_player_player_grenade():
+	print('Throw grenade');

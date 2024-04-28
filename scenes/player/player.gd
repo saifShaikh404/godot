@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+signal player_laser;
+signal player_grenade;
+
 var can_laser: bool = true;
 var can_grenade: bool = true;
 
@@ -9,14 +12,14 @@ func _process(_delta):
 	move_and_slide();
 	
 	if Input.is_action_just_pressed("fire") && can_laser:
-		print('Fire laser');
 		can_laser = false;
 		$LaserTimer.start();
+		player_laser.emit();
 		
 	if Input.is_action_just_pressed("throw") && can_grenade:
-		print('Throw grenade');
 		can_grenade = false;
 		$GrenadeTimer.start();
+		player_grenade.emit();
 
 
 func _on_laser_timer_timeout():
