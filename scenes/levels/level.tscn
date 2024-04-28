@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://b037lo3eu2bjy"]
+
+[ext_resource type="Script" path="res://scenes/script/level.gd" id="1_r00gc"]
+[ext_resource type="Texture2D" uid="uid://cdbtq0yth78hd" path="res://resources/graphics/car/main.png" id="2_nhhfh"]
+[ext_resource type="Script" path="res://scenes/script/Sprite2D.gd" id="3_osxs1"]
+
+[node name="level" type="Node2D"]
+script = ExtResource("1_r00gc")
+
+[node name="Car" type="Sprite2D" parent="."]
+position = Vector2(776, 304)
+rotation = 1.5708
+scale = Vector2(0.579665, 0.579665)
+texture = ExtResource("2_nhhfh")
+script = ExtResource("3_osxs1")
